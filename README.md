@@ -2,8 +2,6 @@
 
 An image classifier built with three stacked convolutional autoencoders trained sequentially in PyTorch. Pre-trained encoder weights are frozen and reused as a feature extractor for downstream classification via transfer learning.
 
----
-
 ## How It Works
 
 **Step 1: Train three autoencoders in sequence**
@@ -22,8 +20,6 @@ Training each autoencoder to reconstruct its input forces it to learn meaningful
 
 The three pre-trained encoders are stacked and their weights are frozen. Fully connected layers are added on top to predict one of 4 image classes. This is transfer learning — the encoders already learned useful features, so the classifier just learns how to use them.
 
----
-
 ## Project Structure
 
 ```
@@ -40,8 +36,6 @@ stacked-autoencoder-classifier/
 └── sample_cl.py      # Baseline classifier for comparison
 ```
 
----
-
 ## Setup
 
 ```bash
@@ -57,8 +51,6 @@ data/
 ├── class3/
 └── class4/
 ```
-
----
 
 ## Usage
 
@@ -83,8 +75,6 @@ To run the baseline models for comparison:
 python sample_ae.py 20
 python sample_cl.py 20
 ```
-
----
 
 ## Tech Stack
 
